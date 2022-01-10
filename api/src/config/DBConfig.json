@@ -1,5 +1,5 @@
 {
-    "host": "mysqldrupal",
+    "host": "172.30.55.30",
     "database": "profuturo_salon_del_cliente",
     "user": "user",
     "password": "password"
