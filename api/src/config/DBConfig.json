@@ -1,5 +1,5 @@
 {
-    "host": "localhost",
+    "host": "mysql",
     "database": "profuturo_salon_del_cliente",
     "user": "user",
     "password": "password"
