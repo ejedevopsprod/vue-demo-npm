@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "database": "profuturo_salon_del_cliente",
+    "user": "user",
+    "password": "password"
+  }

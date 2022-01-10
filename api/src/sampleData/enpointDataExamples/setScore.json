@@ -1,0 +1,15 @@
+{
+    "send": 
+        {
+            "token": 123,
+            "userId": 0, 
+            "worldId":1,
+            "score": 100,
+            "time": 30
+        },
+    "return": 
+        {
+            "score": 100,
+            "time": 30
+        }
+}
