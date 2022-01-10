@@ -1,5 +1,5 @@
 {
-    "host": "mysql",
+    "host": "mysqldrupal",
     "database": "profuturo_salon_del_cliente",
     "user": "user",
     "password": "password"
