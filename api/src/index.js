@@ -5,9 +5,9 @@ const cors = require("cors");
 const app = express();
 
 //settings
-app.set("port", process.env.PORT || 3001);
+app.set("port", process.env.PORT || 8080);
 
-//middlewares
+//middleware
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
