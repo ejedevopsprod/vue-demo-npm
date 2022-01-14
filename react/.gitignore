@@ -1,0 +1,7 @@
+
+### Migración de SVN ###
+svn-code/trunk/.svn/*
+svn-docs/trunk/.svn/*
+*.tar.gz
+node_modules
+build

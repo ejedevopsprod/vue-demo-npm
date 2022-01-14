@@ -1,0 +1,375 @@
+.App {
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins-Medium";
+}
+
+html {
+  background: #f2f8ff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.player {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.hello {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(80vw, 35rem);
+  height: 100%;
+  padding: 0 min(10vw, 5rem);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+  transition: opacity 1s;
+  background: linear-gradient(89deg, #f2f8ffcb 50%, rgba(255, 255, 255, 0));
+}
+
+.hello img {
+  width: 100%;
+}
+
+.hello p {
+  margin: 0;
+}
+
+.hello span {
+  background: #e9993e;
+  color: white;
+  padding: 1em 3em;
+  border-radius: 3em;
+  font-size: 15px;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #d57c16;
+  transition: all 200ms;
+  font-family: "Poppins-Bold";
+}
+
+.hello span.active {
+  /*animation: button 250ms;*/
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #d57c16;
+}
+
+.hello.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hello.hidden * {
+  transition: all 1.5s;
+}
+
+.hello.hidden img {
+  transform: translateX(-25rem);
+}
+
+.hello.hidden p {
+  transform: translateX(-20rem);
+}
+
+.hello.hidden span {
+  transform: translateX(-15rem);
+}
+
+.stage {
+  position: absolute;
+  left: 0rem;
+  top: 0;
+  pointer-events: none;
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stage.open {
+  pointer-events: all;
+}
+
+.portrait-warning {
+  background-color: #fffcf7;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 71.7vw;
+  height: 39vw;
+  border-radius: 5.7vw;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.videoContainer > div {
+  transition: all 500ms ease-in-out;
+}
+
+.videoContainer video {
+  margin: 4vw 5vw;
+  width: auto;
+  height: 28.125vw;
+  pointer-events: all;
+  border-radius: 5px;
+  transition: all 800ms ease-in-out;
+}
+
+.commentContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  width: calc(71.7vw - 8vw);
+  height: calc(39vw - 8vw);
+  border-radius: 5.7vw;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 8vw;
+  transition: all 800ms ease-in-out;
+}
+
+.commentContainer > .title {
+  color: #092c74;
+  font-size: 1.7vw;
+}
+
+.commentContainer > .txt {
+  pointer-events: all;
+  width: 100%;
+  height: 12vw;
+  resize: none;
+  border: solid #127ee0 1px;
+  outline: none;
+  border-radius: 1vw;
+  padding: 1vw;
+  font-size: 1.3vw;
+}
+
+.commentContainer > .btn {
+  /*pointer-events: all;*/
+  opacity: 0;
+  font-size: 1vw;
+  color: #092c74;
+  background: #e9993e;
+  color: white;
+  padding: 0.5vw 2vw;
+  border-radius: 2vw;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 0.2vw 0.2vw 0px #d57c16;
+  transition: all 200ms;
+  font-family: "Poppins-Bold";
+}
+
+.commentContainer > .btn.active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #d57c16;
+}
+
+.commentContainer > * {
+  transform: translateX(80vw);
+  transition: all 800ms ease-in-out;
+}
+
+.gameHTMLContainer {
+  display: flex;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  /*
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 71.7vw;
+  height: 39vw;
+  border-radius: 5.7vw;
+  overflow: hidden;
+  */
+}
+
+.gameHTMLContainer .phone,
+.gameHTMLContainer .phone svg {
+  transition: all 400ms ease-in-out;
+}
+
+.gameHTMLContainer .PCs svg {
+  transition: all 400ms ease-in-out;
+  animation: show-pc 400ms ease-in-out;
+}
+
+#rank {
+  font-family: "Poppins-Bold";
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+#rank .header {
+  background-color: #092c74;
+  height: 15rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+#rank .header .user {
+  font-size: 3rem;
+}
+
+#rank .header .score {
+  font-size: 2rem;
+}
+
+#rank .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rank .list .item {
+  background-color: #2897ea;
+  border-radius: 1.5rem;
+  margin: 1rem 2rem;
+  height: 3rem;
+  width: 50rem;
+  max-width: calc(100vw - 4rem);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+#rank .list .item .left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#rank .list .item .num {
+  font-size: 3rem;
+}
+
+#admin-login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#admin-login > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #092c742e;
+  border-radius: 2rem;
+  padding: 4rem;
+  width: fit-content;
+}
+
+#admin-login .txt {
+  font-family: "Poppins-Bold";
+  font-size: 2rem;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  gap: 4rem;
+}
+
+@keyframes show-pc {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gameHTMLContainer.hidden {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .hello span {
+    width: initial;
+    text-align: center;
+  }
+
+  .hello p {
+    margin: 0;
+    text-align: justify;
+  }
+}
+
+.noselect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./app/assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./app/assets/fonts/Poppins-Bold.ttf");
+}

@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+RewriteRule ^ ./index.html
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+    <FilesMatch "\.(ico|pdf|jpg|png|gif|js|css)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </FilesMatch>
+</IfModule>

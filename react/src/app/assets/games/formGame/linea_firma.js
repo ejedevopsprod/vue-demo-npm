@@ -1,0 +1,1 @@
+export default '<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.84 15.34"><defs><style>.cls-1{fill:#d45000;}</style></defs><title>linea_firma</title><path class="cls-1" d="M55.5,108.7l87.5-8.1,12.6-1.2c3.8-.4,3.8-6.4,0-6l-87.5,8.1-12.6,1.2c-3.8.4-3.9,6.4,0,6Z" transform="translate(-52.61 -93.38)"/></svg>';
