@@ -1,0 +1,39 @@
+[
+    {
+        "type": 0, 
+        "score": 100, 
+        "time": 40, 
+        "status": true
+    },
+    
+    {
+        "type": 1, 
+        "score": 100, 
+        "time": 40, 
+        "status": false
+    },
+    {
+        "type": 2, 
+        "score": 100, 
+        "time": 40, 
+        "status": false
+    },
+    {
+        "type": 3, 
+        "score": 100, 
+        "time": 40, 
+        "status": false
+    },
+    {
+        "type": 4, 
+        "score": 100, 
+        "time": 40, 
+        "status": false
+    },
+    {
+        "type": 5, 
+        "score": 100, 
+        "time": 40, 
+        "status": false
+    }
+]

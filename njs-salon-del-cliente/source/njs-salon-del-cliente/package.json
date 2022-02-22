@@ -1,0 +1,26 @@
+{
+  "name": "profuturo-salon-del-cliente-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.6",
+    "validator": "^13.7.0",
+    "xss": "^1.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
