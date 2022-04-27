@@ -6,7 +6,7 @@ const helmet = require("helmet");
 const app = express();
 
 //settings
-app.set("port", process.env.PORT || 3001);
+app.set("port", process.env.PORT || 8080);
 
 //middlewares
 app.use(morgan("dev"));
