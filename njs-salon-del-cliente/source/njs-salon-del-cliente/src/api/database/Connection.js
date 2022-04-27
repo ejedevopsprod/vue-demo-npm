@@ -7,13 +7,13 @@ const mysqlConnection = mysql.createPool({
   ...DBConfig,
 });
 
-//mysql.createConnection(DBConfig);
-/* mysqlConnection.connect((error) => {
+mysql.createConnection(DBConfig);
+ mysqlConnection.connect((error) => {
   if (error) {
     throw error;
   } else {
     console.log("connection ok");
   }
-}); */
+}); 
 
 module.exports = mysqlConnection;
