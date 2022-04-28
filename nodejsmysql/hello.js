@@ -8,7 +8,7 @@ servidor.listen(8080);
 
 var mysql = require('mysql');
 var con = mysql.createConnection({
-   host: "mysql",
+   host: "mysql1",
    user: "db_manager",
    password: "lRT0dhJS7hDUOVty"
  });
