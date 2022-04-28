@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "API_ENV=dev nodemon hello.js",
+    "start": "API_ENV=production node hello.js",
+    "dev:win": "Set API_ENV=dev&& nodemon hello.js",
+    "start:win": "Set API_ENV=prod&& node hello.js"
+  },
   "dependencies": {
     "mysql": "^2.18.1"
   }
