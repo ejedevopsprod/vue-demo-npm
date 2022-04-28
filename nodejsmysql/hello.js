@@ -4,11 +4,11 @@ var manejador = function(solicitud, respuesta) {
    respuesta.end("Hola Mundo");
 };
 var servidor = http.createServer(manejador);
-servidor.listen(8085);
+servidor.listen(8080);
 
 var mysql = require('mysql');
 var con = mysql.createConnection({
-   host: "localhost",
+   host: "mysql",
    user: "db_manager",
    password: "lRT0dhJS7hDUOVty"
  });
